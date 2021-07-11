@@ -279,7 +279,7 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..."
@@ -333,7 +333,9 @@
                             <div class="text-center text-danger mb-3">Error sending message!</div>
                         </div>
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl bg-secondary disabled " id="submitButton" type="submit">Send</button>
+                        <!-- Recaptcha -->
+                        <div data-netlify-recaptcha="true"></div>
+                        <button class="btn btn-primary btn-xl bg-secondary" id="submitButton" type="submit">Send</button>
                     </form>
                 </div>
             </div>
